@@ -1,0 +1,21 @@
+---
+title: "vignete"
+author: "George Pipis"
+date: "January 27, 2017"
+output: html_document
+---
+
+
+## A brief distription of the Package
+
+This package is created for educational purposes and it is an example of a potential R package.
+
+This particular package has the **fars_read()** This function takes as an input the string of the filename which is in the working directory and returns a tbl_df object using the dplyr package
+
+The **make_filename()** function which creates a filename of the format accident_%d.csv.bz2 where %d is an integer thus this is a character object 
+
+The **fars_read_years()** function which returns only the two columns which are Month and the year 
+
+The **fars_summarize_years()** which rbind the different tbl_df
+
+The **fars_map_state()** which creates a map of the LATITUDE and LONGITUD of the state

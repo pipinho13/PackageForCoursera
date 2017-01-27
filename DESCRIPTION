@@ -1,0 +1,11 @@
+Package: PackageForCoursera
+Type: Package
+Title: What the Package Does (Title Case)
+Version: 0.1.0
+Author: George Pipis
+Maintainer: George Pipis <sergiopit5@hotmail.com>
+Description: This is for an example package for Coursera purposes
+    This is for an example package for Coursera purposes in order to get familiar of hwo to create R packages
+License: What license is it under?
+Encoding: UTF-8
+LazyData: true
