@@ -6,8 +6,8 @@
 #' @return This function takes as an input the string of the filename which is in the working directory
 #'		   and returns a tbl_df object using the dplyr package
 #'
-#' @importFrom readr, read_csv
-#' @importFrom dplyr, tbl_df
+#' @importFrom readr read_csv
+#' @importFrom dplyr tbl_df
 #'
 #' @details if there is no file such a filename in the working directory it returns a message that that filename does not exist
 #'
@@ -50,7 +50,7 @@ make_filename <- function(year) {
 #' @param years A vector of integers
 #' @return it takes as an input a vector of integers which are the years and it returns tbl_df object
 #'
-#' @importFrom dplyr, select, mutate
+#' @importFrom dplyr select mutate
 #'
 #' @details In case that there is not a file in the working directory of that particular year it returns an error of "invalid year"
 #'
@@ -77,8 +77,8 @@ fars_read_years <- function(years) {
 #' @return it takes as an input a vector of integers which are the years and it returns tbl_df object
 #' 			which is a summary of the number of observations by year and month
 #'
-#' @importFrom dplyr, bind_rows, group_by, summarize
-#' @importFrom tidyr, spread
+#' @importFrom dplyr bind_rows group_by summarize
+#' @importFrom tidyr spread
 #' @details By using the tidyr package it spreads the years to columns so the rows are the Months and the columns the Years
 #'
 #' @examples fars_summarize_years(c(2013,2014,2015))
@@ -99,8 +99,8 @@ fars_summarize_years <- function(years) {
 #' @param year An integer of the year
 #' @return it returns a map of the LATITUDE and LONGITUD of the state when an observation occurs in the dataset
 #'
-#' @importFrom dplyr,filter
-#' @importFrom maps, map
+#' @importFrom dplyr filter
+#' @importFrom maps map
 #' @details In case where there is not such state.num it returns a message of invalid State number. Also when LONGITUD > 900 then it is assign as NA.
 #'			The same when LATITUDE>90
 #'
