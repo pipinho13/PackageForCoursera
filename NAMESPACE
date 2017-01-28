@@ -2,3 +2,8 @@ export("PackageForCoursera")
 
 
 
+export("PackageForCoursera")
+
+import(dplyr)
+importFrom("readr", "read_csv")
+importFrom("tidyr", "spread")
