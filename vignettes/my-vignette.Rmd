@@ -1,0 +1,24 @@
+---
+title: "Vignette Title"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+
+
+## Vignette Info
+
+The fars package includes a few functions that are useful for working with data from the US National Highway Traffic Safety Administration's Fatality Analysis Reporting System.
+
+The included functions are:
+
+* fars_read
+* make_filename
+* fars_read_years
+* fars_summarize_years
+* fars_map_state

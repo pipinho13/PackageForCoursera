@@ -2,24 +2,24 @@
 % Please edit documentation in R/Rox_fars_functions.R
 \name{fars_summarize_years}
 \alias{fars_summarize_years}
-\title{It rbind the different tbl_df}
+\title{Monthly number of accidents in each year using the data from FARS data}
 \usage{
 fars_summarize_years(years)
 }
 \arguments{
-\item{years}{A vector of integers}
+\item{years}{a list of FARS data for the years in the parameter \code{years}}
 }
 \value{
-it takes as an input a vector of integers which are the years and it returns tbl_df object
-			which is a summary of the number of observations by year and month
+A dataframe with monthly number of accidents in each row and years as
+colunms. It uses \code{\link{fars_read_years}} function.
 }
 \description{
-It rbind the different tbl_df
-}
-\details{
-By using the tidyr package it spreads the years to columns so the rows are the Months and the columns the Years
+Monthly number of accidents in each year using the data from FARS data
 }
 \examples{
-fars_summarize_years(c(2013,2014,2015))
+  \dontrun{
+    fars_summarize_years(c(2013, 2014))
+    fars_summarize_years(c("2013", "2014"))
+  }
 }
 

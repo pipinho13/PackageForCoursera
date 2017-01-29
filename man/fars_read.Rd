@@ -2,24 +2,25 @@
 % Please edit documentation in R/Rox_fars_functions.R
 \name{fars_read}
 \alias{fars_read}
-\title{read csv}
+\title{Data Input}
 \usage{
 fars_read(filename)
 }
 \arguments{
-\item{filename}{A string of the filename}
+\item{filename}{the name of the file which the data are to be read from.}
 }
 \value{
-This function takes as an input the string of the filename which is in the working directory
-	   and returns a tbl_df object using the dplyr package
+returns a data frame table if the file exists, throws an error if the file
+  doesn't exist. If the filename does not contain an absolute path, the filename
+  is relative to the current working directory, \code{getwd()}.
 }
 \description{
-reads a filename from the working directory
-}
-\details{
-if there is no file such a filename in the working directory it returns a message that that filename does not exist
+Reads a file in table format and creates a data frame table from it.
 }
 \examples{
-fars_read("accident_2013.csv.bz2")
+\dontrun{
+  fars_read("accident_2013.csv.bz2")
+}
+
 }
 

@@ -2,26 +2,28 @@
 % Please edit documentation in R/Rox_fars_functions.R
 \name{make_filename}
 \alias{make_filename}
-\title{make a file name
-creates a file name of the form accident_%d.csv.bz2 where %d is an integer}
+\title{Generate file names for data files from the US National Highway Traffic Safety
+Administration's Fatality Analysis Reporting System
+\href{http://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System (FARS)}.}
 \usage{
 make_filename(year)
 }
 \arguments{
-\item{year}{An integer value}
+\item{year}{An integer or string indicating the year that the data file generated}
 }
 \value{
-This returns a file name of the format accident_%d.csv.bz2 where %d is an integer
-        thus this is a character object
+an string as the name of the file
 }
 \description{
-make a file name
-creates a file name of the form accident_%d.csv.bz2 where %d is an integer
+Generate file names for data files from the US National Highway Traffic Safety
+Administration's Fatality Analysis Reporting System
+\href{http://www.nhtsa.gov/research-data/fatality-analysis-reporting-system-fars}{Fatality Analysis Reporting System (FARS)}.
 }
 \examples{
-make_filename(2013)
-
-
+\dontrun{
+ make_filename(1992)
+ make_filename("2012")
+ }
 
 }
 

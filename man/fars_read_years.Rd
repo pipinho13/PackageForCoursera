@@ -2,23 +2,24 @@
 % Please edit documentation in R/Rox_fars_functions.R
 \name{fars_read_years}
 \alias{fars_read_years}
-\title{It returns only the two columns which are Month and the year}
+\title{Load several year of FARS data files}
 \usage{
 fars_read_years(years)
 }
 \arguments{
-\item{years}{A vector of integers}
+\item{years}{a vector of integer or strings that indicated the year of the FARS data files}
 }
 \value{
-it takes as an input a vector of integers which are the years and it returns tbl_df object
+a list of FARS data for the years in the parameter \code{years}
 }
 \description{
-It returns only the two columns which are Month and the year
-}
-\details{
-In case that there is not a file in the working directory of that particular year it returns an error of "invalid year"
+Load several year of FARS data files
 }
 \examples{
-fars_read_years(c(2013,2014,2015))
+  \dontrun{
+    fars_read_years(c(2013, 2014))
+    fars_read_years(c("2013", "2014"))
+  }
+
 }
 

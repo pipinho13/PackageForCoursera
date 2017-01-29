@@ -2,26 +2,28 @@
 % Please edit documentation in R/Rox_fars_functions.R
 \name{fars_map_state}
 \alias{fars_map_state}
-\title{It creates a map of the LATITUDE and LONGITUD of the state}
+\title{Draws the location of accidents in given state for a given year}
 \usage{
 fars_map_state(state.num, year)
 }
 \arguments{
-\item{state.num}{an integer of the state code}
+\item{state.num}{An integer that represents the state number}
 
-\item{year}{An integer of the year}
+\item{year}{An integer or string}
 }
 \value{
-it returns a map of the LATITUDE and LONGITUD of the state when an observation occurs in the dataset
+plots a map of the state with the accidents as dots on the map.
+It throws an error if \code{"state.num"} is not invalid. If there hasn't been
+any accident in that year, it produces a message.
 }
 \description{
-It creates a map of the LATITUDE and LONGITUD of the state
-}
-\details{
-In case where there is not such state.num it returns a message of invalid State number. Also when LONGITUD > 900 then it is assign as NA.
-		The same when LATITUDE>90
+Draws the location of accidents in given state for a given year
 }
 \examples{
-fars_map_state(1,2013)
+  \dontrun{
+    fars_map_state(48, 2013)
+    fars_map_state(48, 2014)
+    fars_map_state(6, 2013)
+  }
 }
 
