@@ -3,11 +3,3 @@
 language: R
 sudo: false
 cache: packages
-
-#env
-env:
-  global:
-  - _R_CHECK_FORCE_SUGGESTS_=false
-  - MAKEFLAGS="-j 2"
-
-warnings_are_errors: false
